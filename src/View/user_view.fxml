@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #02030A; -fx-background-radius: 10px;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserViewController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="260.0" style="-fx-background-color: #8b84a3;" stylesheets="@../Resource/style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/D:/JavaFX/Car_Rental_System/images/logo.jpg" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button fx:id="btnRent" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" text="Rent" textFill="#1e1313">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/JavaFX/Car_Rental_System/images/rent.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@../Resource/style.css" />
+               </stylesheets>
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" text="Update Profile">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/JavaFX/Car_Rental_System/images/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <stylesheets>
+                  <URL value="@style.css" />
+                  <URL value="@../Resource/style.css" />
+               </stylesheets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnLogout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Logout">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/JavaFX/Car_Rental_System/images/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Bell MT Bold" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="258.0" prefHeight="600.0" prefWidth="550.0" style="-fx-background-color: #FFF;">
+         <children>
+            <Pane fx:id="paneStart" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="117.0" layoutY="73.0" text="Welcome To Car Rental System">
+                     <font>
+                        <Font name="Bell MT Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="106.0" layoutY="143.0" text="If you want to rent a car, by clicking 'Rent' tab...">
+                     <font>
+                        <Font name="Bell MT" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="178.0" prefHeight="21.0" prefWidth="503.0" text=" And then if you want to update your profile, by clicking 'Update Profile' tab...">
+                     <font>
+                        <Font name="Bell MT" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="109.0" layoutY="245.0" text="...Happy Renting. Have A Safe Trip...">
+                     <font>
+                        <Font name="Bell MT Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="paneRent" prefHeight="576.0" prefWidth="793.0" visible="false">
+               <children>
+                  <Label layoutX="130.0" layoutY="84.0" text="This is Menu Pane" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="102.0" layoutY="155.0" text="Name" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="105.0" layoutY="191.0" text="Password" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="238.0" layoutY="40.0" text="Rent Car">
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="93.0" layoutY="111.0" text="Car Register No.">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="rent_form_car_register_no" layoutX="262.0" layoutY="108.0" onAction="#assignCarToTextField" prefHeight="25.0" prefWidth="182.0" />
+                  <Label fx:id="rt" layoutX="92.0" layoutY="182.0" text="Car Model">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="93.0" layoutY="218.0" text="No. Of Seats">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="rent_form_car_model" layoutX="262.0" layoutY="177.0" prefHeight="25.0" prefWidth="182.0">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font></TextField>
+                  <TextField fx:id="rent_form_car_seat" layoutX="262.0" layoutY="213.0" prefHeight="25.0" prefWidth="182.0">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font></TextField>
+                  <Label layoutX="93.0" layoutY="253.0" text="Customer Name">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="94.0" layoutY="286.0" text="Driver Name">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="rent_form_driver_name" layoutX="262.0" layoutY="283.0" onAction="#assignDriverTextField" prefHeight="25.0" prefWidth="182.0" />
+                  <Label layoutX="94.0" layoutY="321.0" text="Driver Available">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="211.0" layoutY="334.0" />
+                  <TextField fx:id="rent_form_driver_available" layoutX="262.0" layoutY="317.0" prefHeight="25.0" prefWidth="182.0">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font></TextField>
+                  <Label layoutX="94.0" layoutY="356.0" text="Price">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="rent_form_price" layoutX="262.0" layoutY="352.0" prefHeight="25.0" prefWidth="182.0">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font></TextField>
+                  <Label layoutX="93.0" layoutY="393.0" text="From Date">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="92.0" layoutY="426.0" text="To Date">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="rent_form_fromDate" layoutX="262.0" layoutY="388.0" prefHeight="25.0" prefWidth="182.0" promptText="Select Date" />
+                  <DatePicker fx:id="rent_form_toDate" layoutX="261.0" layoutY="423.0" prefHeight="25.0" prefWidth="182.0" promptText="Select Date" />
+                  <Button layoutX="139.0" layoutY="476.0" mnemonicParsing="false" onAction="#cancelRentCar" prefHeight="25.0" prefWidth="86.0" styleClass="btnLogin" stylesheets="@../Resource/style.css" text="Cancel">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnRentCar" layoutX="289.0" layoutY="475.0" mnemonicParsing="false" onAction="#startRentCar" prefHeight="25.0" prefWidth="86.0" styleClass="btnLogin" stylesheets="@../Resource/style.css" text="Rent">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="rent_form_car_available" layoutX="262.0" layoutY="142.0" prefHeight="25.0" prefWidth="182.0">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font></TextField>
+                  <Label layoutX="93.0" layoutY="144.0" text="Available">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="rent_form_cus_name" layoutX="262.0" layoutY="248.0" prefHeight="25.0" prefWidth="182.0">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font></TextField>
+               </children>
+            </Pane>
+            <Pane fx:id="paneUpdate" prefHeight="576.0" prefWidth="793.0" visible="false">
+               <children>
+                  <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="235.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="file:/D:/JavaFX/Car_Rental_System/images/user_update.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="59.0" layoutY="224.0" text="Name ">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfCustomerName" layoutX="197.0" layoutY="214.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="240.0" promptText="Kyaw Kyaw">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="tfCustomerNRC" layoutX="197.0" layoutY="257.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="240.0" promptText="7/TaNgaNa(N)123456">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="58.0" layoutY="268.0" text="NRC ">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="57.0" layoutY="349.0" text="Password ">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="tfCustomerPassword" layoutX="197.0" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#checkEmailFromDB" prefHeight="35.0" prefWidth="240.0" promptText="000000">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="58.0" layoutY="307.0" text="Email ">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfCustomerEmail" layoutX="197.0" layoutY="299.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#checkNameFromDB" prefHeight="35.0" prefWidth="240.0" promptText="kyawkyaw@gamil.com">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="57.0" layoutY="392.0" text="Address ">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfCustomerAddress" layoutX="195.0" layoutY="382.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="240.0" promptText="Taungoo">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="57.0" layoutY="435.0" text="Phone No ">
+                     <font>
+                        <Font name="Bell MT Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfCustomerPhoneNo" layoutX="195.0" layoutY="425.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="240.0" promptText="092503992225">
+                     <font>
+                        <Font name="Bell MT" size="14.0" />
+                     </font>
+                  </TextField>
+                  <Button layoutX="214.0" layoutY="492.0" mnemonicParsing="false" onAction="#cancelUpdateProfile" prefHeight="25.0" prefWidth="86.0" styleClass="btnLogin" stylesheets="@../Resource/style.css" text="Cancel">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="328.0" layoutY="492.0" mnemonicParsing="false" onAction="#startUpdateProfile" prefHeight="25.0" prefWidth="86.0" styleClass="btnLogin" stylesheets="@../Resource/style.css" text="Update">
+                     <font>
+                        <Font name="Bell MT Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="212.0" layoutY="155.0" text="Update Profile">
+                     <font>
+                        <Font name="Bell MT Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </children>
+      </StackPane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

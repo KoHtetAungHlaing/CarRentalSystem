@@ -1,0 +1,69 @@
+.login_parent{
+  -fx-background-color: #FFFFFF;
+  -fx-background-radius:10px;
+}
+.login_sidebar{
+  -fx-background-color: #8b84a3;
+}
+.goadminbtn{
+  outline: none;
+}
+.forgetBtn{
+  -fx-text-fill: #8b84a3;
+}
+.forgetBtn:hover{
+  -fx-text-fill: #6747CD;
+  -fx-underline: true;
+}
+.registerBtn{
+  -fx-text-fill: #8b84a3;
+}
+.registerBtn:hover{
+  -fx-text-fill: #6747CD;
+  -fx-underline: true;
+}
+.signIn:hover{
+  -fx-underline: true;
+}
+.btnLogin{
+  -fx-background-color: #8b84a3;
+  -fx-background-radius: 5px;
+  -fx-text-fill: #FFF;
+}
+.btnLogin:hover{
+  -fx-background-color: transparent;
+  -fx-background-radius: 5px;
+  -fx-text-fill: #8b84a3;
+  -fx-border-color: #8b84a3;
+  -fx-border-width: 1px;
+  -fx-border-style: solid;
+  -fx-border-radius: 5px;
+}
+.signUp:hover{
+  -fx-underline: true;
+}
+.closebtn{
+  -fx-fill:#8b84a3
+}
+.closebtn:hover{
+  -fx-fill:#dec688
+}
+.backarrow{
+  -fx-fill:#8b84a3
+}
+.backarrow:hover{
+  -fx-fill:#8b84a3
+}
+.button{
+  -fx-background-color : #8b84a3;
+  -fx-text-fill : #e7e5e5;
+}
+.button:hover{
+  -fx-background-color : #eab676;
+}
+.button:pressed{
+  -fx-background-color : #339fc5;
+}
+.signInCustomer:hover{
+ -fx-underline: true;
+}
